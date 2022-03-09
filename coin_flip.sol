@@ -35,12 +35,6 @@ contract CoinFlip {
         }
     }
 
-    // // returns the random number in range [0, mod-1]
-    // function randModules(uint mod) public view returns(uint){
-    //     return uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) % mod;
-    // }
-
-    
 
     // places bet depending on the given conditions
     function placeBet(int userId, int amount, bool guess) public returns(bool) {
@@ -87,7 +81,6 @@ contract CoinFlip {
     // conclude all bets with win/loss
     function rewardBets() public {
         bool coinResult = true;
-        // uint randNumber = randModules(1000000007);
         uint randNumber = uint(vrf()) & 0xfff;
         // true / false -> heads / tails respectively
         if(randNumber%2 == 0)
