@@ -1,7 +1,5 @@
 # Solidity_Coin_Flip
 
-## Coin Flip Overview
-
 Testnet deployment address : 0x6fFc9b7890c9F702cD060968D8118B030F181DD0
 
 Steps:
